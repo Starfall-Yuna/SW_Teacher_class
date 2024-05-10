@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 멀티미디어 표현, 입력 태그 사용 -->
+    <!-- 멀티미디어 :: 이미지, 오디오, 비디오, 유튜브 영상 -->
+    
+    <audio src="hangouts_incoming_call.ogg" controls>
+        <!-- <audio> 태그 지원X or 파일 형식을 지원X 경우에 표현할 텍스트 -->
+        이 브라우저에서는 해당 형식을 지원하지 않습니다.
+    </audio>
+
+    <!-- <source> 태그를 통해서, 여러 형식의 파일을 함께 업로드,
+        브라우저가 지원하는 형식의 파일을 자동으로 불러오게끔 설정 -->
+    <audio controls>
+        <source src="hangouts_incoming_call.mp3" type="audio/mp3">
+        <source src="hangouts_incoming_call.ogg" type="audio/ogg">
+        이 브라우저에서는 해당 형식을 지원하지 않습니다.
+    </audio>
+    <br>
+
+    <!-- 유튜브 영상 그대로 갖고오기:: <iframe>-->
+    <iframe width="500" height="300" src="https://www.youtube.com/embed/lQ0fS2meTYQ" title="불면증에 좋은 최고의 빗소리 10분이내 수면 백색소음 자장가 ASMR | Rain Sounds For Sleeping, White Noise" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br>
+
+    <!-- 입력 태그 사용 :: <form>, <input>, <label> -->
+    <!-- <form> 태그 :: 입력 양식을 만들어냄 -->
+    <form>
+        <!-- id 속성 :: "식별자" -->
+        <label for="name">이름: </label>
+        <input type="text" id="name">     <br>
+        <label for="birth">생일: </label>
+        <input type="date" id="birth">     <br>
+        <label for="score">프로그래밍 실력(0~100): </label>
+        <input type="range" id="score">    <br><br>
+
+        <!-- radio랑 checkbox :: 하나의 카테고리로 묶어서 사용 -->
+        <!-- radio 타입은 단일 선택만 가능 -->
+        <!-- checkbox 타입은 복수 선택이 가능 -->
+        <h3>지원 분야: </h3>
+        <input type="radio" name="recruit" id="senior" value="senior">
+        <label for="senior">경력</label>
+        <input type="radio" name="recruit" id="junior" value="junior">
+        <label for="junior">신입</label>
+        <h3>취미: </h3>
+        <input type="checkbox" name="hobby" id="golf" value="golf">
+        <label for="golf">골프</label>
+        <input type="checkbox" name="hobby" id="book" value="book">
+        <label for="book">독서</label>
+        <input type="checkbox" name="hobby" id="game" value="game">
+        <label for="game">게임</label>
+        <input type="checkbox" name="hobby" id="sleep" value="sleep">
+        <label for="sleep">숙면</label>
+    </form>
+</body>
+</html>

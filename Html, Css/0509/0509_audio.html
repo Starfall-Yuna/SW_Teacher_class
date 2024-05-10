@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 멀티미디어(오디오, 비디오) 표현 -->
+
+    <!-- <audio> 태그 :: 음성 파일 표현 -->
+    <h3>행아웃 알림소리</h3>
+    <audio src="hangouts_incoming_call.ogg" loop controls>
+        <!-- <audio> 태그를 지원하지 않는 브라우저에서 실행할 때    or
+            지정된 파일 확장자를 지원하지 않는 브라우저에서 실행할 때
+            표시할 문구를 작성 -->
+        이 브라우저는 해당 양식을 지원하지 않습니다. 
+    </audio>
+    <br>
+
+    <!-- 위처럼 작성하면, src의 파일 형식이 애매해짐 -->
+    <!-- => 음성 파일의 확장자에 따라서, 브라우저에서 지원할 수도 있고 안할수도 있음 -->
+    <!-- => 여러 확장자의 파일을 업로드하고, 
+        지원하는 형식의 파일을 브라우저에서 자동으로 열게끔 설정 -->
+    <audio controls>
+        <!-- 여기 안에, 여러 확장자 파일을 올릴 예정 -->
+        <!-- <source> 태그를 여러 개 사용해서 업로드 -->
+        <source src="hangouts_incoming_call.ogg" type="audio/ogg" />
+        <source src="hangouts_incoming_call.mp3" type="audio/mp3"/>
+    </audio>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 태그 선택자 :: html 파일 안의 선택한 모든 태그 선택 */
+        p{      /* p 태그 전체 선택 */
+            color:blue;
+        }
+        /* id 선택자 :: 지정된 값을 id값으로 갖는 태그 선택 (# 기호 사용) */
+        #p1, #p5{
+            background-color:aquamarine;
+        }
+        /* class 선택자 :: class 속성으로 나열된 값 중 지정된 값이 있는 태그 선택 (. 기호 사용)*/
+        .first{
+            font-size: 250%;
+        }
+    </style>
+</head>
+<body>
+    <!-- #p1으로 인해 선택됨, .first로 인해서 선택됨, "first" p tag -->
+    <p id="p1" class="first p tag">p 태그</p>   
+    <p id="p2">p 태그</p>
+    <p id="p3">p 태그</p>
+    <p id="p4">p 태그</p>
+    <p id="p5">p 태그</p>   <!-- #p5으로 인해 선택됨 -->
+    <h3 id="h1" class="first h3 tag">h3 태그</h3>   <!-- .first로 인해 선택됨, "first" h3 tag -->
+</body>
+</html>

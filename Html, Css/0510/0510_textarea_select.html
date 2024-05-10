@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- action 속성 :: 이동할 위치 지정 -->
+    <!-- method 속성 :: 데이터 전송 방식 (get/post) -->
+    <form action="link.html" method="get">
+        <label for="name">이름: </label>
+        <input type="text" id="name">     <br>
+        <!-- <textarea> 태그 :: 여러 줄의 텍스트 입력 가능 -->
+        <label for="intro">자기소개: </label>   <br>
+        <textarea id="intro" rows="10" cols="50">자기소개를 입력하세요.</textarea>
+        <br><br>
+
+        <!-- <select> 태그 :: 단일 선택, 선택지를 미리 제시하고 사용자가 선택 -->
+        <!-- <option> 태그를 통해서 선택지 생성 -->
+        <label>전화번호: </label>
+        <select style="height:22px">
+            <option>선택</option>
+            <option>010</option>
+            <option>011</option>
+            <option>016</option>
+            <option>017</option>
+            <option>018</option>
+        </select> - 
+        <input type="text" style="width:50px"> - 
+        <input type="text" style="width:50px">     <br>
+
+        <!-- <optgroup> 태그 :: select의 옵션을 그룹화 -->
+        <label>주요 사용 언어: </label>
+        <select>
+            <option>선택</option>
+            <optgroup label="웹 언어">
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>Javascript</option>
+            </optgroup>
+            <optgroup label="프로그래밍 언어">
+                <option>C</option>
+                <option>Java</option>
+                <option>Python</option>
+            </optgroup>
+        </select>
+        <br>
+
+        <input type="submit" value="제출">
+    </form>
+</body>
+</html>

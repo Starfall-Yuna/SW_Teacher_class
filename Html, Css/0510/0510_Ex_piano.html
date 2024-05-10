@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3{
+            text-align: center;
+        }
+        p{
+            border: 3px solid black;
+            display: inline-block;
+            width: 50px;
+            height: 200px;
+            text-align: center;
+            padding: 5px;
+            background-color: white;
+
+            /* transition: all 2s; */
+            transition: background-color 2s, color 2s, width 2s, height 2s;
+            transition-timing-function: ease-in;
+            transition-delay: 1s;
+        }
+        div{
+            text-align:center;
+            /* margin: 0 auto;     좌우 여백을 동일하게 가짐 */
+        }
+
+        /* :hover 선택자 :: 마우스를 갖다댔을 때의 이벤트 표현 */
+        #do:hover{
+            background-color: red;
+        }
+        #re:hover{
+            background-color: orange;
+        }
+        #mi:hover{
+            background-color: yellow;
+        }
+        #fa:hover{
+            background-color: green;
+        }
+        #sol:hover{
+            background-color: skyblue;
+        }
+        #la:hover{
+            background-color: blue;
+        }
+        #si:hover{
+            background-color: purple;
+        }
+        /* :active 선택자 :: 마우스로 누르고 있을 때의 이벤트 표현 */
+        p:active{
+            color: white;
+            width: 60px;
+            height: 250px; 
+        }
+
+        /* transition :: "전환" 효과를 줌 */
+        /* 
+        transition 속성 :: "어떤 속성을, 몇 초동안 전환을 수행할 것인가?"를 정의
+        transition-timing-function 속성 :: 전환 효과를 지정
+        transition-delay 속성 :: "몇 초 뒤에 전환을 수행할 것인가?"를 정의
+        */
+    </style>
+</head>
+<body>
+    <h3>피아노</h3>
+    <div>
+        <p id="do">도</p>
+        <p id="re">레</p>
+        <p id="mi">미</p>
+        <p id="fa">파</p>
+        <p id="sol">솔</p>
+        <p id="la">라</p>
+        <p id="si">시</p>
+        <p id="do">도</p>
+    </div>
+</body>
+</html>

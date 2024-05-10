@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 실행 :: Ctrl + F5 -->
+    <p>p 태그 :: 본문 태그</p>
+    <h1>h 태그 :: 제목 태그</h1>
+    <h3>h 태그 뒤에 붙는 숫자에 따라서 글자 크기가 달라짐</h3>
+    <h6>h 태그는 h1부터 h6까지 있음</h6>
+    <br>        <!-- <br> 태그 :: 줄바꿈(개행) 태그 -->
+
+    <!-- 목록 태그 :: <ol>, <ul>, <dl> -->
+    <!-- <ol> 태그 :: ordered list, 순서가 있는 리스트 -->
+    <h3>할일</h3>
+    <ol style="list-style: none;">
+        <!-- <li> 태그를 하나씩 넣으면서, 리스트 요소를 삽입-->
+        <li>가. html 수업 진행하기</li>
+        <li>나. 서류 작업하기</li>
+        <li>다. 메모리 정리하기</li>
+    </ol>
+    <br>
+    <!-- <ul> 태그 :: unordered list, 순서가 없는 리스트 -->
+    <h3>정리해야할 서류</h3>
+    <ul style="list-style: none;">
+        <!-- <li> 태그를 하나씩 넣으면서, 리스트 요소를 삽입-->
+        <li>* 수업 자료</li>
+        <li>* 과정 기획안</li>
+        <li>* 과정진행 보고서</li>
+    </ul>
+    <!-- <dl> 태그 :: 용어에 대한 설명할 때 사용하는 리스트 -->
+    <h3>프로그래밍 언어 설명</h3>
+    <dl>
+        <!-- <dt>, <dd> 태그를 사용하여 => 특정 용어, 용어에 대한 설명 -->
+        <dt>Java</dt>
+        <dd>객체지향 언어</dd>
+        <dt>C</dt>
+        <dd>절차지향 언어</dd>
+        <dt>Python</dt>
+        <dd>스크립트 언어</dd>
+    </dl>
+    <br>
+    <br>
+
+    <!-- <table> 태그 :: 테이블 생성 -->
+    <h3>계정 정보</h3>
+    <table border="1" style="width: 500px">
+        <!-- 자세한 행과 열에 대한 선언은 <table> 태그 안에서 진행 -->
+        <!-- <tr>, <th>, <td> -->
+        <tr>        <!-- <tr> 태그 :: table row, 하나의 행을 표현 -->
+            <!-- <th> 태그 :: table heading, 칼럼명 -->
+            <th>아이디</th>
+            <th>비밀번호</th>
+            <th>이름</th>
+        </tr>
+        <tr>
+            <!-- <td> 태그 :: table data, 실질적인 데이터 -->
+            <td>lyn99730@naver.com</td>
+            <td>12345</td>
+            <td>이유나</td>
+        </tr>
+        <tr>
+            <td>workyuna77@gmail.com</td>
+            <td>11111</td>
+            <td>이유나</td>
+        </tr>
+    </table>
+</body>
+</html>

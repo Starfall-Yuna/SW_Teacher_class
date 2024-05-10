@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 입력 태그 :: <form>, <input>, <label> -->
+    <h1>회원가입 Form</h1>
+    <h3>아래의 양식대로 정보를 입력해주세요.</h3>
+
+    <!-- <form> 태그 :: 입력 양식을 만들어내는 태그 -->
+    <form>
+        <!-- <input>랑 <label> 작성할 수 있음 -->
+        <!-- <input> 태그 :: 사용자의 입력을 받을 공간 만들어둠 -->
+        <!-- <label> 태그 :: 입력칸에 대한 설명을 작성 -->
+        <label> 이름: </label>
+        <input type="text">            <br>
+        <label>생년월일: </label>
+        <input type="date">           <br>
+        <label>좋아하는 색상: </label>
+        <input type="color">          <br>
+        <label>코딩 능력(0 ~ 100): </label>
+        <input type="range">          <br>
+
+        <br>
+        <label> 아이디: </label>
+        <input type="text">            
+        <input type="button" value="아이디 중복확인">  <br>
+        <label>비밀번호: </label>
+        <input type="password">       <br>
+        <label>비밀번호 확인: </label>
+        <input type="password">       <br>
+        <label>이력서 파일: </label>
+        <input type="file">           <br>
+        
+        <br>
+        <input type="submit" value="제출">
+    </form>
+</body>
+</html>
