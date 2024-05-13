@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 고급 선택자 :: "태그들 간의 관계"를 따지면서 스타일 적용할 태그 선택 */
+        
+        /* 1. 후손 선택자(" ") :: 특정 태그 안에 있는 후손 태그를 선택 */
+        div p{      /* div 안에 있는 p 태그 선택    (div - ... - p -> 직속 후손이 아니라도 적용O) */
+            color: red;
+        }
+        /* 2. 자손 선택자(>) :: 직속 후손인 태그를 선택 */
+        div > p{
+            background-color:mediumspringgreen;
+        }
+        table > tbody > tr > th {
+            color: red;
+        }
+        
+        /* 부정 선택자(":not") :: 선택자를 반대로 반전시켜서 적용 */
+    </style>
+</head>
+<body>
+    <p>div 바깥의 p 태그</p>
+    <div>
+        <p>div 안쪽의 p 태그</p>
+        <span>
+            <p>div 안의 span 안의 p 태그</p>
+        </span>
+        <p>div 안쪽의 p 태그</p>
+    </div>
+    <p>div 바깥의 p 태그</p>
+
+    <!-- table 태그 안에, tr 태그 안에, th 태그를 빨간색 글씨로 적용 
+        자손 선택자만 활용, th를 직접적으로 불러오진 X-->
+    <table border="1">
+        <tr>
+            <th>이름</th>
+            <th>생년월일</th>
+        </tr>
+        <tr>
+            <td>Lee</td>
+            <td>1999.07.30</td>
+        </tr>
+        <tr>
+            <td>Kim</td>
+            <td>1996.08.08</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            background-color:red;
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            font-size: 25px;
+            color: white;
+        }
+        /* 마우스 커서를 갖다댔을 때, change_color 애니메이션 (무한으로) 수행*/
+        p:hover{
+            animation-name: change_color;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;        /* 애니메이션 수행 횟수 */
+        }
+        /* 마우스를 꾹 누르고 있을 때, change_size 애니메이션 (무한으로) 수행 */
+        p:active{
+            animation-name:change_size;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        /* 애니메이션을 무한으로 실행할 때, 자연스럽게 변경이 되게끔 하려면 0% 값이랑 100% 값이 동일해야 함 */
+        /* 색상 변경 (빨강(0%) -> 노랑 -> 파랑 -> 빨강(100%)) */
+        @keyframes change_color{
+            0%      {background-color: red;}
+            33%     {background-color: yellow;}
+            66%     {background-color: blue;}
+            100%    {background-color: red;}
+        }
+
+        /* 크기 변경 (커졌다가 작아졌다가) */
+        @keyframes change_size{
+            0%      {width: 100px;  height: 100px;}
+            50%     {width: 500px;  height: 500px;}
+            100%    {width: 100px;  height: 100px;}
+        }
+    </style>
+</head>
+<body>
+    <p>사각형</p>
+</body>
+</html>

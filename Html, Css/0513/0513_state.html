@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 상태 선택자 :: :checked, :focus, :enabled, :disabled */
+        /* :checked :: 체크된 상태의 input 태그 선택 */
+        [type="checkbox"]:checked + label{        /* 타입이 "checkbox"인 요소가 체크된 상태일 때, 바로 다음에 있는 요소 선택 */
+            color: red;                 /* 체크된 체크박스 타입의 input 태그를 선택X (동위선택자의 + 내용 참고) */
+        }
+        div{
+            width: 500px;
+            height: 100px;
+            overflow:hidden;       /* div에 정의된 내용을 표현하기에 공간이 부족할 때 = overflow 상황*/
+                /* div에 정의된 내용을 표현하기에 공간이 부족할 때, 내용을 숨긴다. */
+            transition-duration: 2s; 
+        }
+        #sentence:checked + div{
+            height: 0px;
+        }
+
+
+        /* :focus :: 포커싱이 맞춰져있을 때의 스타일 지정 */
+        /* :enabled :: 사용할 수 있는 (입력) 태그를 선택 */
+        input:disabled{
+            background-color:gray;
+        }
+        #text1:enabled{     /* :enabled 선택자는 :focus 선택자의 설정을 덮어씌울 수 있음 */
+            background-color:lightgreen;
+        }
+        #text1:focus{       /* id가 "text1"인 요소로 포커싱이 맞춰질 때 */
+            background-color:lightcoral;
+        }
+
+        /* 문자 선택자 :: 시작 문자 선택자 */
+        div::first-letter{
+            font-size: 200%;
+        }
+        div::first-line{
+            color: red;
+        }
+    </style>    
+</head>
+<body>
+    <input type="checkbox" name="hobby" value="game">   
+    <label>게임</label>
+    <input type="checkbox" name="hobby" value="book">
+    <label>독서</label>
+    <input type="checkbox" name="hobby" value="jogging">
+    <label>조깅</label>
+    <br>
+
+    <input type="checkbox" id="sentence">
+    <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur esse magni, aut possimus laudantium hic alias. Exercitationem rem nisi necessitatibus magnam cumque. Quia, eum laborum et sed cum fugit at?
+    </div>
+    <br>
+
+    <p>:focus, :enabled 적용</p>
+    <input type="text" id="text1">
+    <p>:disabled 적용</p>
+    <input type="text" id="text2" disabled="disabled">
+    <br>
+</body>
+</html>

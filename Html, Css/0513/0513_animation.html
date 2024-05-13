@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            background-color:aquamarine;
+            border: 2px solid black;
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            font-size: 30px;
+
+            animation-name: change_size;
+            animation-duration: 3s;         /*애니메이션 지속시간 설정*/
+        }
+
+        /* keyframes :: 애니메이션을 정의하는 키워드 */
+        @keyframes change_size{     /* change_size라는 이름의 애니메이션 생성 */
+            /* 커졌다가 작아지는 애니메이션 구현 */
+            0%      {width: 200px;  height: 200px;}
+            25%     {width: 300px;  height: 300px;}
+            50%     {width: 400px;  height: 400px;}
+            75%     {width: 300px;  height: 300px;}
+            100%    {width: 200px;  height: 200px;}
+        }
+        /* 200px, 200px     => 400px, 400px     => 200px, 200px */
+    </style>
+</head>
+<body>
+    <p>사각형</p>
+</body>
+</html>

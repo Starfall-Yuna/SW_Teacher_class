@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 동위 선택자 :: 동일한 위치, 특정 태그와 나란하게 위치한 태그들 중에서 선택 */
+
+        /* 선택자1 + 선택자2 :: 선택자1 "바로 뒤에" 있는 선택자2 선택 */
+        h1 + h2{
+            border: 3px solid sienna;
+        }
+
+        /* 선택자1 ~ 선택자2 :: 선택자1 뒤에 있는 선택자2 선택 */
+        h1 ~ h2{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>h1 태그 이전에 있는 h2 태그</h2>
+    <h1>h1 태그</h1>
+    <p>p 태그</p>       <!-- h1 태그 바로 다음에 있는 태그 :: p 태그 (h2태그 X)-->
+    <h2>h1 태그 다음에 있는 h2 태그</h2>        <!-- 스타일 중복 적용 (+, ~)-->
+    <h2>h1 태그 뒤에 있는 h2 태그</h2>      <!-- ~ 선택자로만 적용 -->
+    <h2>h1 태그 뒤에 있는 h2 태그</h2>
+</body>
+</html>
