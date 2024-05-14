@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        hr{
+            width:50%;
+        }
+        div{
+            text-align: center;
+        }
+        img{
+            width: 150px;
+            height: 150px;
+
+            animation-name: size_change;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        #calling{
+            float: left;
+            margin-left: 25%;
+        }
+        #no_call{
+            float: right;
+            margin-right: 25%;
+        }
+
+        @keyframes size_change{
+            0%      {width: 150px;  height: 150px;}
+            50%     {width: 200px;  height: 200px;}
+            100%    {width: 150px;  height: 150px;}
+        }
+    </style>
+</head>
+<body>
+    <h1>전화가 왔습니다. 받으시겠습니까?</h1>
+    <hr>
+    <div id="calling">
+        <form action="Ex_calling.html">
+            <button>전화받기</button>   <br>
+            <img src="call.png">
+        </form>
+    </div>
+    <div id="no_call">
+        <form action="Ex_no_call.html">
+            <button>전화거절</button>   <br>
+            <img src="call_no.png">
+        </form>
+    </div>
+</body>
+</html>

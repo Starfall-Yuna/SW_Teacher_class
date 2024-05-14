@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 선택자 :: 후손/자손 선택자, 동위선택자, 상태선택자 */
+        /* 
+        - 후손선택자(" ") :: 특정 태그 안에 있는 지정된 태그 선택
+        - 자손선택자(">") :: 특정 태그 바로 안에 있는 지정된 태그를 선택
+        */
+        form label{  /* "form 태그 안에 있는 label 태그를 선택" */
+            color:darkgreen;
+        }
+        /* form > label{   div 태그를 거쳐서 label 태그가 있음 -> 적용X 
+            font-size: 200%;
+        } 
+        */
+        div > label{       /* div 태그 바로 안에 있는 label 태그를 선택 */
+            font-size: 150%;
+        }
+
+        /* 동위선택자 :: +, ~   (형제 태그를 선택, 나란하게 있는 태그를 선택)
+            + :: 특정 태그 바로 다음에 있는 태그를 선택
+            ~ :: 특정 태그 뒤로 있는 태그 선택
+        */
+        #intro + label{
+            background-color: yellow;
+        }
+        #intro ~ label{
+            font-weight: bold;
+        }
+
+        div{
+            display: inline;
+        }
+
+        /* 상태선택자(입력 태그에 많이 씀) :: :enabled, :disabled, :checked, :focus */
+        /* has() 선택자 :: () 안에 있는 요소를 갖고 있는 태그 선택 */
+        [type="text"]:focus{
+            background-color: aqua;
+        }
+        [type="radio"]:enabled + span{     /* 사용 가능한 라디오 타입의 태그들의 바로 다음으로 오는 span 태그 선택 */
+            color: blue;
+        }
+        [type="radio"]:disabled + span{     /* 사용 불가능한 라디오 타입의 태그의 바로 다음으로 오는 span 태그 선택 */
+            color:lightgray;
+        }   
+        div:has([type="radio"]:checked){     /* 체크된 라디오 타입의 태그를 갖는 div를 선택 */
+            background-color: yellow;
+        }   
+        div:has([type="radio"]:checked) span{       /* 체크된 라디오 타입의 태그를 갖는 div의 span 태그 선택 */
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div>
+            <!-- <label>아래의 정보를 입력해주세요.</label>  -->
+            <p id="intro">아래의 정보를 입력해주세요.</p>
+            <label>이름: </label>
+            <input type="text" id="name">   <br>
+            <label>생년월일: </label>
+            <input type="date" id="birth">
+        </div>
+        <input type="submit" value="제출">
+    </form>
+    <br>
+
+    <form id="gender_select">
+        <div>
+            <input type="radio" name="gender" value="male">
+            <span>남성</span>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="female">
+            <span>여성</span>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="etc" disabled="disabled">
+            <span>기타</span>
+        </div>
+    </form>
+</body>
+</html>

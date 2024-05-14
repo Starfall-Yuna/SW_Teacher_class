@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            user-select:none;
+        }
+        #content{
+            width:300px;
+            border: 3px solid black;
+        }
+        /* 문자 선택자 :: 시작문자 선택자(::first-letter), 시작줄 선택자(::first-line) */
+        #content::first-letter{
+            font-size: 250%;
+        }
+        #content::first-line{
+            color: blue;
+        }
+
+        /* 전후 문자 선택자 => ::before, ::after */
+        /* p{
+            counter-increment: rint;        
+            p 요소가 하나씩 발견될 때마다, 카운팅이 됨
+            counter-increment에 의해서 rint 값이 1씩 커진다.
+        } */
+        #first::before{         /* #first인 태그 이전 공간을 선택 */
+            content: "가.";     /* 어떤 내용을 적을지를 content로 명시 */
+        }
+        #second::before{
+            content: "나.";
+        }
+        #third::before{
+            content: "다.";
+        }
+        #sentence::before{
+            content: "(Lorem에 대한 설명이 다음으로 이어집니다.)";
+        }
+
+        #first::after{
+            content: " - 1순위";
+        }
+        #second::after{
+            content: " - 3순위";
+        }
+        #third::after{
+            content: " - 2순위";
+        }
+        #sentence::after{       /* attr -> attribute -> "속성" */
+            content: " - "attr(data-page)" page"
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam sed placeat nam cumque, architecto eveniet rerum reprehenderit temporibus ea maiores officiis aliquam ipsum! Nesciunt dolorem, fuga ipsum doloribus ullam blanditiis.
+    </div>
+    <br>
+
+    <!-- ::before를 통해서, p 요소 앞에 순번을 붙일 예정 -->
+    <h1>To do List</h1>
+    <p id="first">수업 진행하기</p>
+    <p id="second">커피 사오기</p>
+    <p id="third">점심 먹기</p>
+    <h1>Lorem</h1>
+    <div id="sentence" data-page="52">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa hic totam, suscipit sed nisi officiis eos a? Voluptas dignissimos laboriosam cum doloribus neque sunt harum, quod, accusamus nam incidunt reiciendis.
+    </div>
+</body>
+</html>

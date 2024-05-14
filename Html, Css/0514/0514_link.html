@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 링크 선택자 :: a 태그에서 주로 적용하는 선택자 */
+        /* :link :: "href가 있는" a 태그 선택*/
+        #kb:link{       /* href가 있는 #kb 태그 선택 (href로 들어간 이력이 없어야 확인 가능) */
+            color:darkred;
+        }
+        #naver:link{
+            color: green;
+        }
+
+        #naver:active{
+            color:aquamarine;
+        }
+        
+        /* :visited :: "href"가 있는 a 태그 선택 (이미 한번 방문한 태그에 대해서 선택)*/
+        #kb:visited{
+            color:gray;
+        }
+        #naver:visited{
+            color:rgb(36, 58, 36);
+        }
+    </style>
+</head>
+<body>
+    <a id="kb" href="http://www.kb.or.kr/">경북산업직업전문학교 사이트 이동</a> <br>
+    <a id="naver" href="http://www.naver.com/">네이버로 이동</a>
+</body>
+</html>

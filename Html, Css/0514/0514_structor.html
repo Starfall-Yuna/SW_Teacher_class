@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color:cyan;
+
+            transition: all 3s;
+        }
+        #content:hover > .box{
+            width:500px;
+            opacity: 50%;      /* 불투명도 */
+        }
+
+        /* 구조 선택자 :: 일반 구조 선택자, 형태 구조 선택자 */
+        /* 일반 구조 선택자 :: 순서를 중요시 */
+        #content > .box:first-child{      /* #content 안에 있는, class로 설정된 값에서 box가 있는 "첫번째 요소" */
+            transition-timing-function: linear;
+        }
+        #content > .box:nth-child(2){      /* #content 안에 있는, class로 설정된 값에서 box가 있는 "두번째 요소" */
+            transition-timing-function: ease;
+        }
+        #content > .box:nth-child(3){
+            transition-timing-function:ease-in;
+        }
+        #content > .box:nth-last-child(2){
+            transition-timing-function: ease-out;
+        }
+        #content > .box:last-child{
+            transition-timing-function: ease-in-out;
+        }
+
+        /* 형태 구조 선택자 :: 순서, 태그 종류를 중요시 */
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div class="box">linear</div>
+        <div class="box">ease</div>
+        <div class="box">ease-in</div>
+        <div class="box">ease-out</div>
+        <div class="box">ease-in-out</div>
+    </div>
+</body>
+</html>

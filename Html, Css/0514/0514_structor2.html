@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 일반 구조 선택자에서 생길 수 있는 문제 */
+        h3:first-child{     /* body 기점으로, 첫번째 태그가 h3가 아니어서 적용X */
+            color: red;
+        }
+        h3:first-of-type{   /* body 기점으로, 첫번째 h3 태그에 대해서 선택 */
+            color:red;
+        }
+
+        h3:last-child{      /* body 기점으로, 마지막 태그가 h3가 아니어서 적용X */
+            color:blue;
+        }
+        h3:last-of-type{    /* body 기점으로, 마지막 h3 태그에 대해서 선택 */
+            color:blue;
+        }
+
+        /* 마찬가지로, nth-of-type()과 nth-last-of-type()도 있음*/
+    </style>
+</head>
+<body>
+    <h1>첫번째 h1 태그</h1>
+    <h3>1번째 h3 태그</h3>
+    <h3>2번째 h3 태그</h3>
+    <h3>3번째 h3 태그</h3>
+    <h3>4번째 h3 태그</h3>
+    <h3>5번째 h3 태그</h3>
+    <h1>마지막 h1 태그</h1>
+</body>
+</html>

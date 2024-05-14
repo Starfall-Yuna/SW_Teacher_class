@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* :not 선택자 :: 선택자를 반대로 적용(! 역할) */
+        p:not(div > p){     /* p 전체 중에서, "div > p"(div의 자식으로 있는 p)를 만족하지 않는 p 선택 */
+            color: red;
+        }
+        input:not([type="text"]){
+            background-color:darkkhaki;
+        }
+    </style>
+</head>
+<body>
+    <p>div 바깥에 있는 p 태그</p>
+    <div>
+        <p>div 안에 있는 p 태그</p>
+        <p>div 안에 있는 p 태그</p>
+        <p>div 안에 있는 p 태그</p>
+    </div>
+    <p>div 바깥에 있는 p 태그</p>
+    <br>
+
+    <form>
+        <label>아이디: </label>
+        <input type="text" id="id">    <br>
+        <label>비밀번호: </label>
+        <input type="password" id="pw">    <br>
+        <label>생년월일: </label>
+        <input type="date" id="birth">
+    </form>
+</body>
+</html>
