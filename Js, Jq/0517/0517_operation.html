@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 변수(let), 상수(const, 값 변경X)
+        // let v = 5;
+        // v = 4;
+        // const c = 1.5;
+        // c = 6;
+
+        // 변수 선언 :: var(함수), "let" (메모리 문제) 
+
+        // - 산술연산자 :: +, -, *, /, %
+        // - 대입연산자 :: =
+        // - 비교연산자 :: <, >, <=, >=, ===(같다), !==(다르다)
+        //          => == 와 ===의 차이 :: ==은 값만 비교 / ===은 값과 타입을 같이 비교
+        console.log("1==\"1\"의 결과(값만 비교) :: " + (1 == "1"));
+        console.log("1===\"1\"의 결과(값과 타입을 같이 비교) :: " + (1 === "1"));
+        // - 논리연산자 :: &&, ||, !
+        // - 삼항연산자 :: ? (if-else 구문을 한 문장으로 표현)
+
+        let gender = confirm("남성이면 확인, 여성이면 취소를 눌러주세요.");
+        gender === true ? document.write("남성입니다.") : document.write("여성입니다.");
+    </script>
+</body>
+</html>

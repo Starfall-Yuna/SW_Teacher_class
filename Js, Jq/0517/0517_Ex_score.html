@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="score"></div>
+    <script>
+        let score = [];
+
+        // 1. 정보처리기사 1~5과목의 성적 입력
+        for(let i=1; i<=5; i++){
+            // 탬플릿 문자열 사용법 :: `${}`
+            score[i] = Number(prompt(`${i}과목 성적을 입력해주세요`, 0));
+        }
+        let no = 0;     // 불합격 요소 카운팅
+
+        let d = document.getElementById("score");
+        // 2-1. 1~5과목 과락 여부 출력
+        for(let i=1; i<=5; i++){
+            d.innerHTML += `${i}과목 점수: ` + score[i];        // 과목 점수만 출력
+            if(score[i] < 40){
+                d.innerHTML += " (과락)";
+                no++;       // 과락 1번 발생 시, no에 1을 추가
+            }
+            else{
+                d.innerHTML += " (통과)";
+            }
+            d.innerHTML += "<br>";
+        }
+
+        // 2-2. 총점/통과 여부 출력
+        let sum = 0;
+        for(let i=1; i<=5; i++){
+            sum += score[i];
+        }
+        d.innerHTML += "총점: " + sum/5;
+        if(sum/5 < 60){
+            d.innerHTML += " (FAIL)";
+            no++;
+        }
+        else{
+            d.innerHTML += " (PASS)";
+        }
+
+        // 3. 합불 결과에 따라, 경고창 출력
+        if(no > 0){     // 불합격 요소가 하나라도 있다면, 불합격 처리
+            alert("불합격하였습니다.");
+        }
+        else{
+            alert("축하합니다. 합격하였습니다.");
+        }
+    </script>
+</body>
+</html>

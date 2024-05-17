@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // (다른 언어의) 배열 :: "같은 타입의" 여러 값을 담을 수 있는 하나의 공간
+        // int score[3] = {90, 60, 50};
+        // int score[];
+
+        // 배열 :: 여러 값을 담을 수 있는 하나의 공간 (다른 타입의 정보를 함께 저장할 수 있음)
+        //      => 변수나 배열 선언할 때, let 또는 const만 쓰기 때문 (타입을 명시하는 게 없어서)
+        let introduce = [];         // introduce가 배열인 것만 선언
+        introduce[0] = "이유나";
+        introduce.push(26);
+        introduce.push("여성");     // push(element) :: element를, 배열의 맨 뒷 공간에 붙여넣어줌
+        introduce[10] = true;       // 10번 공간을 할당하면서, 3~9번 공간까지 introduce에 함께 할당됨
+        console.log(introduce);
+        console.log(introduce.length);
+
+        // 배열값 삭제 => delete (공간 할당까지 취소X)
+        delete introduce[10];
+        console.log(introduce);
+        console.log(introduce.length);
+    </script>
+</body>
+</html>

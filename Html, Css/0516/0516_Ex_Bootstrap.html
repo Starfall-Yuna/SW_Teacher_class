@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <style>
+        .navbar.navbar-expand-lg{
+            box-shadow: 0 10px 20px darkgray;
+        }
+        .nav-item > .nav-link.disabled{
+            color: lightgray;
+            margin-left: 50px;
+        }
+        .navbar-brand{
+            font-size:200%;
+        }
+        .mb-lg-0{
+            margin: 0 auto;
+        }
+        .container{
+            text-align: center;
+            margin: 0 auto;
+        }
+        .card{
+            display: inline-block;
+            margin: 10px;
+        }
+        #card_img{
+            width: 270px;
+            height: 300px;
+        }
+        #job_image{
+            width:800px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 바 -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <div>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAe1BMVEX///8AAAD8/PzS0tJfX1/a2trd3d1aWlqCgoJYWFiFhYXPz89iYmJcXFzf39/5+fkwMDCMjIzr6+vy8vIODg6YmJhJSUkICAhqampxcXGnp6ceHh6Dg4PIyMiKioooKCg9PT27u7uhoaG3t7d6enoWFhYjIyPCwsKlpaXN5d5bAAAE0ElEQVR4nO2c6UIqMQyFZ8YFVBBZFEFFUVze/wmv4NYlSpouGbjn+8u0JjbtyaTtVBUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdofx0+x6Nh9pm5GP+bTecKltSC6G9RczbVPysKx/eNQ2Jgs3hofTgbY1GTioTZba5mSga3k41DYnAzf77qEdpPsoGHaQ1gfa9iRncGE5eNFoG5QcJ0hvte1Jz+m+B2ljr6TtD9LRvLta3AWY6QRpl3rm/HExfB2nMjGOzxT64Y7dwgnSM/+J887ml0krZKT/bekTt4ntYO0/8DPI/ZSmimj6hqnnvDZntoOn3gNj49eO8iRteqatJ7xGW+V+Zf58qOti3zaWV5G4t9o8e783E+sB1UB1HKxZi42zkvpBeuT0ygyNDDSHjik8D7cG6ZnbbV8rUHuuJdS67+HmpP77vTuG73MxvfEcTjxDao5CM+R+4nWsEqiEgytOO0ZOuvC7Lu9i44doXbMKSvYAvVCPDKZ+38VFw1tk3jniNOTkpNUx0XvhuejKBNtBRk66xl9sygZqQzl4zGvrBOBvj50Tf6FgAkfNQd4Ibs9JvyADtZSL8hANKUFRgdpJYv9WYhxsbLl/+WtQqFEsMRf9VK1mz0FGTmpCzcUCCVzEHKxCS1BUoGYXjU6Ug4394kTkpDYKokE5yA5RptybUIF6kjFQyVSNP4JcuTcpLBriVO0Lu+mE04QK1Gxv/TEysYEt9yblRCNOJjbIdpyKiUbsHKzcbdEptxkpGuldjJOJDUFyb1JENCJlYoN8W5QUjcC//jekTIQ6uL0E9TuUi0kDNVom1gTLvUnmBK5LdB/sYOS2KOVi2D/pD6gQYW7CmDxbHVwoWUEy9LsOH8G4IF1DSH+qczhXbsdTgYOCnNTlyCsyXgnsoHhwOxYdQ3P6kHSxdA15kPRCkGQMRTmpTb4xTDIP409BZZyHKVaxZtu2aBErfiWBHkYHaVY9TJHTxAZp7qJUdF4ak5OuyZ6Xli9B2eR/t6hi3w/T56QZChlR7/i2kt2E/eVC7/hRdZqoIC1Y3JfX2m7tRkFBWnSDRiwazuGKkL9ZtF4qrnlHyH3xjVKZaCQuQeXdYJOIhiP393wLVQ4sCAI1aZ00/6ETgWhI5V5pDzhcNJoX61H2yXytffwq2EWh3CuexQidi7ISlOp5msAzUfZjzB0n5TNRQYEqknvtc21VSAInkXsdmbChEjj6wrK9krL27sd+3xqXEojsZkE8JpH7a7/rYquoie8iNUCCIB35DipdSPAD1Z+JkhLUnR+i6Y1n4SdwvtZJ5H7uOah3McgNVH8MJTnpsh0h+oGti8Q8tLdF71mdOlqhe0HPFg3/voUsJ7Xmbk/7ep4ZqP6VGVlOai412vcPKzNQiUnmzChunz/7efp3SN+5/KikdYitLnEJav5ZnWvJBzPGr8PFG7mVJy9Bjeer3uyx9d+Qck7m3+hPqdQk2LtvOf/dF0z272tQ0aegWs/lvgepcw4ncFt0J7A93MMgrZb7HqTVwNwYJa807zxvhoev2sbkYfbtYEtS6PR8CsaE/XGe3WM0n13PnlryvScAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsPgH/2Mp9c1TI8gAAAAASUVORK5CYII="
+                width="50" height="50" alt="conding">
+              <a class="navbar-brand" href="#">LPG</a>
+              <span class="nav-item">
+              <a class="nav-link disabled">Learning Programming Grammer</a>
+          </span>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item col">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item dropdown col">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Language
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#html">HTML</a></li>
+                  <li><a class="dropdown-item" href="#css">CSS</a></li>
+                  <li><a class="dropdown-item" href="#js">JavaScript</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#c">C</a></li>
+                  <li><a class="dropdown-item" href="#java">Java</a></li>
+                  <li><a class="dropdown-item" href="#python">Python</a></li>
+                </ul>
+              </li>
+              <li class="nav-item col">
+                <a class="nav-link" href="#job">JobSite</a>
+              </li>
+              <li class="nav-item col">
+                <a class="nav-link" href="#qa">Q&A</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <br><br><br><br><br><br>
+
+      <!-- 언어 카드 -->
+      <div class="container">
+        <h1>Language</h1>
+        <hr>
+        <div class="card" id="html" style="width: 18rem;">
+            <img id="card_img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFGvfXnNyB1HacT6EgBLYkRwBXnPa9GSYd_zjyWtDbzw&s" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><strong>HTML</strong></h5>
+              <p class="card-text">
+                Learning <code>HTML</code> <br>
+                Hyper Text Markup Language  <br>
+                with <code>w3school</code>
+              </p>
+              <a href="https://www.w3schools.com/html/default.asp" class="btn btn-primary">Go to Learn</a>
+            </div>
+          </div>
+          <div class="card" id="css" style="width: 18rem;">
+            <img id="card_img" src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><strong>CSS</strong></h5>
+              <p class="card-text">
+                Learning <code>CSS</code> <br>
+                Cascading StyleSheet  <br>
+                with <code>w3school</code>
+              </p>
+              <a href="https://www.w3schools.com/css/default.asp" class="btn btn-primary">Go to Learn</a>
+            </div>
+          </div>
+          <div class="card" id="js" style="width: 18rem;">
+            <img id="card_img" src="https://velog.velcdn.com/images/sk9663/post/43251ec8-a7dd-4099-9153-e1c16e3a116f/image.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><strong>JavaScript</strong></h5>
+              <p class="card-text">
+                Learning <code>JavaScript</code>   <br>
+                Add Events for better Website <br>
+                with <code>w3school</code>
+              </p>
+              <a href="https://www.w3schools.com/js/default.asp" class="btn btn-primary">Go to Learn</a>
+            </div>
+          </div>
+          <br><br>
+          <div class="card" id="C" style="width: 18rem;">
+            <img id="card_img" src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><strong>C</strong></h5>
+              <p class="card-text">
+                Learning <code>C</code>   <br>
+                Start your programming study <br>
+                with <code>TcpSchool</code>
+              </p>
+              <a href="https://www.tcpschool.com/c/intro" class="btn btn-primary">Go to Learn</a>
+            </div>
+          </div>
+          <div class="card" id="java" style="width: 18rem;">
+            <img id="card_img" src="https://cdn.iconscout.com/icon/free/png-256/free-java-60-1174953.png?f=webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Java</h5>
+              <p class="card-text">
+                Learning <code>Java</code>   <br>
+                Important for WebSite developing <br>
+                with <code>TcpSchool</code>
+              </p>
+              <a href="https://www.tcpschool.com/java/intro" class="btn btn-primary">Go to Learn</a>
+            </div>
+          </div>
+          <div class="card" id="python" style="width: 18rem;">
+            <img id="card_img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Python</h5>
+              <p class="card-text">
+                Learning <code>Python</code>   <br>
+                Top of Programming Language <br>
+                with <code>TcpSchool</code>
+              </p>
+              <a href="https://www.tcpschool.com/python/intro" class="btn btn-primary">Go to Learn</a>
+            </div>
+        </div>
+        <br><br><br><br><br><br>
+
+      <!-- JobSite -->
+      <h1>JobSite</h1>
+      <hr>
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="https://www.saramin.co.kr/zf_user/">
+                <img id="job_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMLUxkNoDHnKw70xG121ZBkZjY2SqW8ysh39SDEDo4&s.png" class="d-block w-100" alt="...">
+            </a>
+            <h3>사람인 : 이동하기</h3>
+          </div>
+          <div class="carousel-item">
+            <a href="https://www.jobkorea.co.kr/OnePick/JobList?Ord=GcmCodeAmtDesc&utm_source=google&utm_medium=cpc&utm_campaign=pc_%EB%B8%8C%EB%9E%9C%EB%93%9C_tcpa&utm_content=pc_%EB%B8%8C%EB%9E%9C%EB%93%9C_tcpa_%EC%9B%90%ED%94%BD%EA%B3%B5%EA%B3%A0(%EA%B8%B0%EC%88%A0)&utm_term=%EC%9E%A1%20%EC%BD%94%EB%A6%AC%EC%95%84">
+                <img id="job_image" src="https://i.namu.wiki/i/mBZrOj-o-FbZ24oQYZjgf1xzhJgHulvcxlp3D6pECe1EIr96RBYQSHo19M_o35tqA8TgcSvzRQqDa1vvQD6NPw.svg" class="d-block w-100" alt="...">
+            </a>
+            <h3>잡코리아 : 이동하기</h3>
+          </div>
+          <div class="carousel-item">
+            <a href="https://www.jobplanet.co.kr/job">
+                <img id="job_image" src="https://jpassets.jobplanet.co.kr/production/uploads/material/media/7444/jp_og.png" class="d-block w-100" alt="...">
+            </a>
+            <h3>잡플래닛 : 이동하기</h3>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+</body>
+</html>

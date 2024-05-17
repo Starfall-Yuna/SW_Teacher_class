@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- picture 태그 :: srcset, media 속성 -->
+    <!-- media 속성 :: 미디어쿼리의 "미디어", 조건식을 넣어서 사진을 달리 표현할 수 있게 함 -->
+    <picture>       <!-- 사진을 표현할 공간만 제공, 정보를 받아서 표현하는 것까진 X -->
+        <!-- 실질적인 사진에 대한 내용은 source 태그로 나열 -->
+        <source srcset="https://png.pngtree.com/png-clipart/20221206/ourmid/pngtree-yellow-star-3d-icon-png-image_6511591.png"
+            alt="별" media="(max-height: 400px)">   <!-- 높이가 400px 이하일 때-->
+        <source srcset="https://gongu.copyright.or.kr/gongu/wrt/cmmn/wrtFileImageView.do?wrtSn=11131500&filePath=L2Rpc2sxL25ld2RhdGEvMjAxNC8yMS9DTFM2L2RpZ2lfMTExMzE1MDBfMDEyMDE0MTExMzA3&thumbAt=Y&thumbSe=b_tbumb&wrtTy=10006.png"
+            alt="꽃" media="(max-height: 700px)">   <!-- 높이가 700px 이하일 때 + (높이가 400px 초과할 때)-->
+        <source srcset="https://img.freepik.com/free-photo/fresh-coffee-steams-on-wooden-table-close-up-generative-ai_188544-8923.jpg"
+            alt="커피">     <!-- media 속성이 없는 source가 기본값으로 설정됨  -->
+        <img style="width: 400px; height: 400px;">       <!-- 사진을 실질적으로 표현하는 건 <img> 태그를 통해서 진행 -->
+    </picture>
+</body>
+</html>

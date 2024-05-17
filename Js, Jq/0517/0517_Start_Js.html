@@ -1,0 +1,52 @@
+<!DOCTYPE html>     <!-- html 문서 -->
+<html lang="en">
+<head>      <!-- html 화면 구성 정의 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Css 스타일 정의 */
+    </style>
+</head>
+<body>
+    <h2 id="h2_tag"></h2>
+    <script>
+        // 자바스크립트(Js) :: 화면 이벤트(동작) 구현, CSS보다 더 많은 동작 구현(브라우저창 바깥의 동작 제어)
+        // <script> 통해서 자바스크립트 구문 작성
+        /* 
+          내부 js :: html 문서의 <script> 태그를 통해서 js 구문 작성
+          외부 js :: .js 확장자 파일을 작성하고, src 속성을 통해서 파일 불러오기
+        */
+
+        // ''(표준)와 ""의 차이가 js에선 없다.
+
+        // 출력문(경고창 출력) :: alert()
+        alert("alert 적용하였을 때 출력 결과")
+
+        // 출력문(콘솔상 출력) :: console.log()
+        console.log("console.log()를 통한 출력")
+
+        // 출력문(HTML 상의 출력) :: document.write()
+        document.write('document.write()를 통한 출력')
+
+        // 출력문(HTML 상의 출력) :: innerHTML (HTML 요소의 텍스트를 대체)
+        // 1. 텍스트를 대체할 "HTML 요소 당겨오기"  => getElementById()
+        let text = document.getElementById("h2_tag");       // text 변수와 #h2_tag 요소를 연결
+        text.innerHTML = "innerHTML 적용 결과";
+        
+        // 변수, 상수 선언 :: let(변수), const(상수)
+        // 자료형은 초기화 값의 타입으로 자동 지정
+        // 자료형 :: number / String / Boolean
+        let v=5;      // typeof(v) = 'number' (소수점 자리는 초기값의 크기만큼 자동 배정)
+        let c='a'               // typeof(c) = 'string'
+        let s='안녕하세요'      // typeof(s) = 'string'
+        let b=true;             // typeof(b) = 'boolean'
+        let b1 = (1==1.0);         // typeof(b1) = 'boolean'
+        
+        // let ns = 1 - 'a'.charCodeAt();       // charCodeAt() :: 알파벳 -> 아스키 코드의 숫자로 변형
+        let ns = 1 - 'a';      // 'number' - 'string'
+        console.log(ns);        // ns = 'NaN' (Not a Number, 올바르지 않은 연산 결과일 때 적용되는 타입)
+        console.log(typeof(ns));        // typeof(ns) = 'number'
+    </script>
+</body>
+</html>

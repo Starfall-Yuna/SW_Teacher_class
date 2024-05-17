@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 입력문 :: 사용자의 입력을 받는 구문, 경고창을 통해서 입력을 받음
+        //      => prompt(), confirm()
+
+        // 1. prompt() :: Number 타입 또는 String 타입의 입력을 받음
+        // prompt("질문지", "기본값")
+        let name = prompt("이름을 입력하세요.", "(ex) 홍길동");
+        let age = Number(prompt("나이를 입력하세요.", 0));
+            // prompt()로 받은 값을 Number 타입으로 변환하고 age에 저장
+
+        // 타입 명시 함수(강제 형변환 함수) :: Number(), String(), Boolean()
+
+        // 2. confirm() :: boolean(true/false) 타입의 입력을 받음
+        // confirm("질문지")        => "확인": true, "취소": false
+        let con = confirm("이대로 회원가입을 진행하시겠습니까?");
+    </script>    
+</body>
+</html>

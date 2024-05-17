@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="name"></p>
+    <p id="age"></p>
+    <p id="gender"></p>
+
+    <script>
+        // 1. 이름, 나이, 성별에 대해서 입력받기
+        let name = prompt("이름을 입력하세요.", "(ex) 홍길동");
+        let age = Number(prompt("나이를 입력하세요."), 0);
+        let gender = prompt("성별을 입력하세요.", "(ex) 남성");
+
+        // 2. "이대로 회원가입을 진행하시겠습니까?"를 통하여 bool타입 입력받기
+        let tf = confirm("이대로 회원가입을 진행하시겠습니까?");
+
+        // 3-1. tf가 true인 경우 :: innerHTML을 통해서 정보 출력
+        if(tf === true){
+            alert("회원가입을 완료하였습니다.");
+            let text_name = document.getElementById("name");
+            text_name.innerHTML = "이름: " + name;
+            let text_age = document.getElementById("age");
+            text_age.innerHTML = "나이: " + age;
+            let text_gen = document.getElementById("gender");
+            text_gen.innerHTML = "성별: " + gender;
+        }
+
+        // 3-2. tf가 false인 경우
+        else{
+            alert("회원가입이 정상적으로 종료되지 않았습니다.");
+            document.write("회원가입이 실패하였습니다.");
+        }
+    </script>
+</body>
+</html>

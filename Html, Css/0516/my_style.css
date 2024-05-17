@@ -1,0 +1,4 @@
+.list-group-item{   /* 목록 태그에 적용된 스타일을 임의로 수정 */
+    display: inline-block;
+    width: 300px;
+}
