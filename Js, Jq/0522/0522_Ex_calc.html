@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 조건문 :: if-else if-else, switch
+        // 반복문 :: for, while, do-while, for/in, for/of
+
+        // 반복 수행
+        while(true){
+            // 1. 첫번째 숫자, 두번째 숫자 입력
+            let a = Number(prompt("첫번째 숫자를 입력해주세요."))
+            let b = Number(prompt("두번째 숫자를 입력해주세요."))
+            if(a===0 && b===0){break;}
+
+            let oper = prompt("연산자를 입력해주세요. (+, -, *, /, %)")
+
+            switch(oper){
+                case '+':
+                    alert("덧셈 결과: "+add(a, b));     break;
+                case '-':
+                    alert("뺄셈 결과: "+sub(a, b));     break;
+                case '*':
+                    alert("곱셈 결과: "+multi(a, b));     break;
+                case '/':
+                    alert("몫 나누기 결과: "+div(a, b));     break;
+                case '%':
+                    alert("나머지 나누기 결과: "+rest(a, b));     break;
+            }
+        }
+        
+        function add(n1, n2){
+            return n1 + n2;
+        }
+        function sub(n1, n2){
+            return n1 - n2;
+        }
+        function multi(n1, n2){
+            return n1 * n2;
+        }
+        function div(n1, n2){
+            return n1 / n2;
+        }
+        function rest(n1, n2){
+            return n1 % n2;
+        }
+    </script>
+</body>
+</html>

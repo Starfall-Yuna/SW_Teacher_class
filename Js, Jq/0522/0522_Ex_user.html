@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = {
+            id: prompt("아이디를 입력하세요"),
+            name: prompt("이름을 입력하세요"),
+            tel: prompt("전화번호를 입력하세요"),
+            email: prompt("이메일을 입력하세요"),
+            Print1: function(){
+                for(i in this){    
+                    // hasOwnProperty(i) :: 해당 객체에 i라는 인덱스가 있는지 판별
+                    if(i !== "Print1"){
+                        document.write(i +": "+user[i]+"<br>")
+                    }
+                }
+            },
+            Print2: function(){
+                for([key, value] of Object.entries(user)){
+                    if(key !== "Print1" && key !== "Print2"){
+                        document.write(key+": "+value+"<br>")
+                    }
+                }
+            }
+        }
+        function Print1(){
+            for(i in user){
+                document.write(i +": "+user[i]+"<br>")
+            }
+        }
+        function Print2(){
+            for([key, value] of Object.entries(user)){      
+                // user 객체를 배열로 전환 -> 배열의 인덱스와 값을 key, value로 전달
+                if(key !== "Print1"){
+                    document.write(key+": "+value+"<br>");
+                }
+            }
+        }
+
+        // Print1();
+        //user.Print1();
+        //Print2();
+        user.Print2();
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 반복문 :: for, while, do-while, for/in, for/of
+
+        let array = [true, 555, "Lee", 937];
+            // array[0]=true
+            // array[1]=555
+            // array[2]="Lee"
+            // array[3]=937
+        // for(임의의 변수 in 객체){
+        //     명령문들;
+        // }
+        // for(임의의 변수 of 객체){
+        //     명령문들;
+        // }
+        console.log("for/in 결과");
+        for(let i in array){            // for/in의 i :: 객체의 인덱스 불러옴(인덱스와 값이 함께 필요한 경우에 사용)
+            console.log(i);
+        }
+        console.log("for/of 결과");
+        for(let i of array){            // for/of의 i :: 객체의 value 불러옴(값만 필요한 경우에 사용)
+            console.log(i);
+        }
+    </script>
+</body>
+</html>

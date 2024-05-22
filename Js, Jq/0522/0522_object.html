@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체
+        // 객체 선언 (JavaScript에서는 클래스의 개념이 별도로 없음)
+
+        // let/const 객체명 = {멤버명 : 멤버값, ...}
+        let student = {
+            // 필드(멤버 변수) 선언
+            name: "이유나",
+            age: 26,
+            blood: "A",
+            // 메소드(멤버 함수) 선언
+            Print: function(){
+                document.write(this.name + "<br>");
+                document.write(this["age"] + "<br>");
+                document.write(this.blood + "<hr>");
+                return this.name;
+            }
+        }
+        console.log(typeof(student));
+
+        // 객체 멤버 접근 :: 객체명.멤버명 (객체명에 this를 쓸 수 있음) / 객체명["멤버명"]
+        console.log("이름: " + student["name"]);
+        console.log("나이: " + student.age);
+        console.log("혈액형: " + student.blood);
+        console.log(student.Print());       // "이유나" 반환값 출력 
+    </script>
+</body>
+</html>
