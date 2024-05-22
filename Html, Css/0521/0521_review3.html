@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* position 속성 :: 요소에 대한 위치 배정 방법 설정(top, left) */
+        /* static값(정적) :: 웹사이트 시작점으로부터, 요소를 그냥 붙이며 배치 (좌표값 설정X) */
+        /* relative값(상대적) :: 본래 static값 기점으로 있어야할 위치에서부터, 좌표를 임의로 이동하며 배치 */
+        /* fixed값(고정적) :: 브라우저 상의 지정된 위치에 고정적으로 배치 (스크롤 영향X, 부모 태그 영향X) */
+        /* absolute값(절대적) :: 부모 태그의 시작점으로부터, 지정된 위치에 배치*/ 
+
+        .div{
+            width: 100px;
+            height: 100px;
+        }
+        .first{
+            background-color: red;
+            position: absolute;
+            left: 500px;
+            top: 100px;
+        }
+        .second{background-color: yellow;}
+        .third{background-color: green;}
+
+        .relative{
+            position: relative;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="relative">
+        <div class="first div"></div>
+        <div class="second div"></div>
+        <div class="third div"></div>
+    </div>
+</body>
+</html>

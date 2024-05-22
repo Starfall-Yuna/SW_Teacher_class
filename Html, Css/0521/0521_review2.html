@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 링크 선택자 */
+        #naver:link{        /* href 속성이 정의된 a 태그에 대해 선택*/
+            color: yellowgreen;
+        }
+        #naver:visited{     /* href 속성이 정의된 a 태그에 대해 선택 (이미 방문한 href값을 갖는 경우) */
+            color: green;
+        }
+        #daum:link{
+            color: blue;
+        }
+        #daum:visited{
+            color:darkblue;
+        }
+        #google:link{
+            color: red;
+        }
+        #google:visited{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <!-- 텍스트 박스에 입력한 값을 네이버 검색결과 확인 -->
+    <a id="naver" href="https://www.naver.com/">네이버로 이동</a>
+    <form action="https://search.naver.com/search.naver">
+        <input type="text" name="query">
+        <input type="submit" value="네이버 검색">
+    </form> <br>
+    <a id="daum" href="https://www.daum.net/">다음으로 이동</a>
+    <form action="https://search.daum.net/search">
+        <input type="text" name="q">
+        <input type="submit" value="다음 검색">
+    </form> <br>
+    <a id="google" href="https://www.google.com/">구글로 이동</a>
+    <form action="https://www.google.com/search">
+        <input type="text" name="q">
+        <input type="submit" value="구글 검색">
+    </form>
+    <!-- 다음이랑 구글에 대해서도 위 원리와 같이 적용해보시오-->
+</body>
+</html>
