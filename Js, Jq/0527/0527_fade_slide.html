@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        div{
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <button id="show">나타나기</button>
+    <button id="hide">숨기기</button>
+    <button id="toggle">토글</button>
+    <br><br>
+    <div id="para">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, quasi ab nemo ipsum, cum quidem repellat eaque quae non aperiam, officiis commodi ratione alias incidunt? Quisquam est deleniti natus quas.
+    </div>
+
+    <script>
+        // fade 효과 함수 :: fadeIn, fadeOut, fadeToggle
+        // $(document).ready(function(){
+        //     // 본문을 나타나게 하는 이벤트 추가
+        //     $("#show").click(function(){
+        //         $("#para").fadeIn(1000);
+        //     })
+
+        //     // 본문을 숨기게 하는 이벤트 추가
+        //     $("#hide").click(function(){
+        //         $("#para").fadeOut(1000);
+        //     })
+
+        //     // 토글 이벤트 추가
+        //     $("#toggle").click(function(){
+        //         $("#para").fadeToggle(1000);
+        //     })
+        // })
+
+        // slide 효과 함수 :: slideUp, slideDown, slideToggle
+        $(document).ready(function(){
+            $("#show").click(function(){
+                $("#para").slideDown(1000);
+            })
+            $("#hide").click(function(){
+                $("#para").slideUp(1000);
+            })
+            $("#toggle").click(function(){
+                $("#para").slideToggle(1000);
+            })
+        })
+    </script>
+</body>
+</html>

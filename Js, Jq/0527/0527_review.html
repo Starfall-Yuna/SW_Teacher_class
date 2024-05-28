@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <p>JQuery 테스트 (색상 변경)</p>
+    <button id="submit">제출</button>
+
+    <script>
+        // JavaScript 이벤트 적용
+        // - 태그에 직접 적용
+        // - 함수 정의 + 태그에 함수 적용
+        // - 이벤트 리스너 함수 사용
+        
+        // 1) js 변수 - html 태그 연결
+        let sub = document.getElementById("submit");
+        // 2) 변수를 통해서, 태그에 이벤트 추가 (addEventListener 함수 사용)
+        sub.addEventListener("click", check) 
+        // 3) 이벤트 리스너에 적용할 함수 정의
+        function check(){
+            let ch = confirm("정말로 완료하실겁니까?");
+            if(ch === true){
+                alert("완료되었습니다.");
+            }
+            else{
+                alert("취소하였습니다.");
+            }
+        }
+
+        // JQuery :: JavaScript 보조하는 "라이브러리"
+        // Jq를 적용하는 것부터 먼저 해야함    
+        //      1) 파일 다운로드 받고, 파일에 적용  
+        //      2) 파일이 저장된 온라인 링크 그대로 적용
+
+        // $(document).ready(function(){
+        //     // 명령문들
+        //     // $("선택자").함수()
+        // })
+
+        // $ :: "접근하다"
+        $(document).ready(function(){       // html 문서에 대한 내용이 모두 불러오기 되었으면
+            alert("JQuery 테스트");
+            $("p").css("color", "blue");
+        })
+    </script>
+</body>
+</html>

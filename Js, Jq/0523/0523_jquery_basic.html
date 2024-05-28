@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="./jquery-3.7.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <button id="btn">색상 변경</button>
+    <p id="first_p">파란색 배경, 하얀색 글씨</p>
+    <script>
+        // JQuery :: Js 보조 라이브러리 (Js 코드 간략화)
+        // $(document).ready(function(){
+        //     $("선택자").함수()
+        // })
+
+        // 자바스크립트나 css 코드를 jquery로 작성해봄
+        $(document).ready(
+            alert("안녕하세요")
+        )
+        $(document).ready(function(){      
+            $("#first_p").css("background-color", "blue");
+            $("#first_p").css("color", "white");
+        })
+
+        // 이벤트 적용
+        $(document).ready(function(){     // document html 문서의 모든 정보를 모두 불러온 뒤에
+            $("#btn").click(function(){     // #btn 클릭을 하였을 때,
+                alert("색상을 변경합니다...")
+                $("#first_p").css("background-color", "gray")
+                $("#first_p").css("color", "black")
+            })
+        })
+    </script>
+</body>
+</html>

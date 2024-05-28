@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <button id="button">애니메이션 시작</button>
+    <h3 id="title" style="display: none">본문은 여기입니다.</h3>
+
+    <script>
+        // jquery 이벤트 적용 + 효과, 연쇄, 콜백함수
+        $(function(){
+            $("button").click(function(){
+                // show, hide, toggle   (display 속성에 영향을 줌)
+                // fade :: fadeIn, fadeOut, fadeToggle
+                // slide :: slideDown, slideUp, slideToggle
+                $("#title").fadeIn(1000, function(){
+                    alert("show를 수행하였습니다.")
+                }).fadeOut(1000, function(){
+                    alert("hide를 수행하였습니다.")
+                });      // 1초동안 보여주고, 1초동안 숨긴다.
+            })
+        })
+    </script>
+</body>
+</html>

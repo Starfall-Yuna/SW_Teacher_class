@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <button id="hide">숨기기</button>
+    <button id="show">나타내기</button>
+    <button id="toggle">토글</button>
+    <br><br>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, saepe reprehenderit inventore eaque quam eius quaerat suscipit est amet! Possimus vero eos consectetur molestiae molestias expedita ratione cum facere magnam.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia omnis facilis necessitatibus quasi unde debitis, harum odit numquam? Sunt, dicta molestias itaque consequuntur nam aperiam voluptates illo perferendis expedita non?</p>
+
+    <script>
+        // 1) 상태 변수를 임의로 지정
+        // let state = true;       // 본문 나타나있으면 true, 숨어져있으면 false
+        // $(document).ready(function(){
+        //     $("#hide").click(function(){
+        //         if(state === true){
+        //             console.log($("p").css("display"));
+        //             alert("본문이 사라집니다...!");
+        //             $("p").hide(1000);
+        //             state = false;
+        //         }
+        //     })
+        //     $("#show").click(function(){
+        //         if(state === false){
+        //             console.log($("p").css("display"));
+        //             alert("본문이 나타납니다...!");
+        //             $("p").show(1000);
+        //             state = true;
+        //         }
+        //     })
+        //     $("#toggle").click(function(){
+        //         console.log($("p").css("display"));
+        //         if(state === true){
+        //             alert("토글 :: 본문이 사라집니다...!");
+        //             state = false;
+        //         }
+        //         else{
+        //             alert("토글 :: 본문이 나타납니다...!");
+        //             state = true;
+        //         }
+        //         $("p").toggle(1000);
+        //     })
+        // })
+
+        // 2) p의 display 값을 직접 비교하며 수행
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                if($("p").css("display") === "block"){
+                    alert("본문이 사라집니다...!");
+                    $("p").hide(1000);
+                }
+            })
+            $("#show").click(function(){
+                if($("p").css("display") === "none"){
+                    alert("본문이 나타납니다...!");
+                    $("p").show(1000);
+                }
+            })
+            $("#toggle").click(function(){
+                if($("p").css("display") === "block"){
+                    alert("토글 :: 본문이 사라집니다...!");
+                }
+                else{
+                    alert("토글 :: 본문이 나타납니다...!");
+                }
+                $("p").toggle(1000);
+            })
+        })
+    </script>
+</body>
+</html>

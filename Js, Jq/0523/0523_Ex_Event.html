@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #content{
+            width: 100%;
+            height: 150px;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <button id="show">보여주기</button>
+    <button id="hid">숨기기</button>
+    <br>
+    <div id="content">       <!-- 테두리 -->
+        <div id="para">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis magni non doloribus, nemo consequuntur aspernatur! Molestias, laborum culpa iure dicta sint labore provident odit officia autem quod quo. Quod, est.
+        </div>
+    </div>
+
+    <script>
+        // 변수랑 태그 연결
+        let show = document.getElementById("show")
+        let hid = document.getElementById("hid")
+        let para = document.getElementById("para")
+
+        // 이벤트 리스너 함수 사용
+        show.addEventListener("click", showPara)
+        hid.addEventListener("click", hidPara)
+        para.addEventListener("mouseenter", change_color)
+
+        // 이벤트에 적용할 함수 정의
+        function showPara(){
+            para.style.display = "block";
+            para.style.color = "black";
+        }
+        function hidPara(){
+            para.style.display = "none";
+        }
+        function change_color(){
+            para.style = "color: blue";
+        }
+    </script>
+</body>
+</html>

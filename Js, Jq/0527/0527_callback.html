@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <button id="button">숨기기</button>
+    <p id="p_tag" style="font-size: 250%">Text Area</p>
+
+    <script>
+        // 콜백 함수 :: 특정 행위/함수를 수행하고 난 뒤에, 후처리를 정의해둔 함수
+        //  "후처리"라는 개념을 통해, 충돌이 일어날 법한 "명령어 순서를 명확하게" 정의할 수 있음
+        $(document).ready(function(){
+            $("#button").click(function(){
+                // hide() 수행한 뒤, alert()를 수행할 의도 -> 의도대로 되지 않았음
+                // $("#p_tag").hide(2000)
+                // alert("텍스트를 숨깁니다.")
+
+                $("#p_tag").hide(2000, function(){
+                    alert("텍스트를 숨깁니다.")
+                })
+            })
+        })
+    </script>
+</body>
+</html>

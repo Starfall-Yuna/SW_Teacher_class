@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <button id="add_even">짝수만 더하기</button>
+    <button id="add_odd">홀수만 더하기</button>
+    <p id="result"></p>
+
+    <script>
+        $(function(){
+            $("#add_even").click(function(){
+                let n = Number(prompt("숫자를 입력해주세요(짝수만 입력)"))
+
+                // 1부터 n까지의 숫자들 중 짝수만 더하고
+                // 덧셈 절차 및 결과는 html에, 덧셈 결과는 경고창에 띄우기
+                let sum = 0;
+                let oper = "";
+                for(let i=1; i<=n; i++){
+                    if(i % 2 === 0){
+                        sum += i;
+                        oper += `${i}`
+                        if(i === n){oper += `=${sum}<br>`}
+                        else{oper += "+"}
+                    }
+                }
+                $("#result").append(oper)
+                setTimeout(function(){      // 콜백함수를 쓸 수 있는 다른 방법
+                    alert(`합 결과 :: ${sum}`)
+                }, 500)
+            })
+
+            $("#add_odd").click(function(){
+                let n = Number(prompt("숫자를 입력하세요(홀수만 입력)"))
+
+                let sum = 0;
+                let oper = "";
+                for(let i=1; i<=n; i++){
+                    if(i % 2 !== 0){
+                        sum += i
+                        oper += `${i}`
+                        if(i === n){oper += `=${sum}<br>`}
+                        else{oper += "+"}
+                    }
+                }
+                $("#result").append(oper)
+                setTimeout(function(){
+                    alert(`합 결과 :: ${sum}`)
+                }, 500)
+            })
+        })
+    </script>
+</body>
+</html>

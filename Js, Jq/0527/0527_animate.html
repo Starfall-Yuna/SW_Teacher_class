@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <button id="start">애니메이션 시작</button>
+    <br><br>
+    <div id="nemo"></div>
+
+    <script>
+        // animate 함수 :: css의 애니메이션 구현
+        // Jquery의 animate 함수는 색상 애니메이션 제공X
+        $(function(){
+            $("#nemo").css("width", "150px");
+            $("#nemo").css("height", "150px");
+            $("#nemo").css("background-color", "blue");
+
+            $("#start").click(() => {
+                $("#nemo").animate({width: "300px", height: "300px", opacity: "0.3"}, 2000, "linear")
+            })
+        })
+    </script>
+</body>
+</html>

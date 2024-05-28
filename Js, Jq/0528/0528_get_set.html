@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <p id="text">오늘은 <code>화요일</code>입니다.</p>
+
+    <button id="text_print">텍스트 출력</button>
+    <button id="text_input">텍스트 설정</button>
+    <br><br>
+    <button id="html_print">html 출력</button>
+    <button id="html_input">html 설정</button>
+    <hr>
+
+    <label for="name">이름: </label>
+    <input type="text" id="name"/>
+    <br><br>
+    <button id="val_print">value 출력</button>
+    <button id="val_input">value 초기화</button>
+
+    <br><br>
+    <button id="attr_print">속성 출력</button>
+    <button id="attr_input">속성 설정</button>
+
+    <script>
+        // DOM :: Document Object Model(문서 객체 모델)
+        // DOM 조작 :: html 요소 설정에 관여(불러오기, 설정, ...)       
+        //      => Js, Jq를 통해서, html 문서를 관리
+        // append(), css(), ... 
+
+        // get, set :: 불러오기 함수, 설정 함수
+        //  => text(), html(), val(), attr()
+        $(function(){
+            $("#text_print").click(function(){       // #text_print 버튼 클릭하면
+                alert("텍스트 내용 :: " + $("#text").text())        // #text 요소의 텍스트를 불러와서 출력
+            })
+            $("#text_input").click(function(){
+                let change = prompt("변경할 텍스트를 입력해주세요");
+                $("#text").text(change);
+                alert("변경한 내용 :: " + $("#text").text())
+            })
+            $("#html_print").click(function(){
+                console.log("html 내용 :: " + $("#text").html())
+            })
+            $("#html_input").click(function(){
+                $("#text").html("오늘은 <strong>화요일</strong>입니다.");
+                console.log("변경된 내용 :: " + $("#text").html())
+            })
+            $("#val_print").click(function(){
+                alert("현재 입력값 :: " +  $("[type='text']").val())
+            })
+            $("#val_input").click(function(){
+                $("[type='text']").val("(ex)홍길동")
+            })
+            $("#attr_print").click(function(){
+                console.log($("[type='text']").attr("id"));
+            })
+            $("#attr_input").click(function(){
+                $("[type='text']").attr("type", "password");
+                alert("input 태그의 type을 password로 변경하였습니다.");
+            })
+        })
+    </script>
+</body>
+</html>

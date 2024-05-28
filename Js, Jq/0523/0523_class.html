@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 클래스 :: 객체를 생성하는 틀 (class 키워드 사용)
+        class Student{
+            // 별도의 필드 선언할 필요X, 생성자 실행하면서 추가됨
+            constructor() {      // 생성자 (constructor)
+                this.name = "Lee"
+                this.age = 30
+                this.alert = function(){    // 생성자를 실행하는 객체에 직접적으로 들어가는 함수
+                    alert("경고!!!")
+                }
+            }
+            Print(){        // 클래스를 통해서 접근할 수 있는 함수
+                console.log(this)
+            }
+        }
+        let Lee = new Student();        // Student 클래스에 있는 생성자 실행'
+        console.log(typeof(Lee))
+        delete Lee.name      // delete 키워드를 통해서 멤버 삭제
+        Lee.Print();
+    </script>
+</body>
+</html>

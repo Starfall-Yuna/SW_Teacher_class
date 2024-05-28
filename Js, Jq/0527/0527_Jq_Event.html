@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        div{
+            border: 3px solid black;
+            background-color: white;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <button id="change">스타일 변경</button>
+    <br><br>
+    <div>
+        사각형
+    </div>
+
+    <script>
+        // js 이벤트 :: onclick, onmouseenter, onmouseleave, ondblclick
+
+        // JQuery 이벤트
+        $(document).ready(function(){   // html 문서 불러오기가 완료된 뒤에,
+            // "#change" 버튼을 누르면, div에 대한 스타일 변경이 수행
+            $("#change").click(function(){       // "#change" 버튼을 누르면
+                $("div").css("background-color", "gray")
+                $("div").css("opacity", "0.5")
+                $("div").text("스타일 변경 완료")
+                $("div").css("width", "200px")
+                $("div").css("height", "200px")
+            })   
+        })
+    </script>
+</body>
+</html>

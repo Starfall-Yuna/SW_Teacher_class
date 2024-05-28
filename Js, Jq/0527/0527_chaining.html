@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        #sentence{
+            color: black;
+            font-size: 150%;
+        }
+    </style>
+</head>
+<body>
+    <p id="sentence">Today is Moooonday</p>
+    <p id="text">Hide/show</p>
+    <button id="btn">이벤트 실행</button>
+
+    <script>
+        // 연쇄(chaining) :: jq에서 연달아 수행하는 동작을 편하게 작성
+        $(document).ready(function(){
+            // fontSize 먼저 변하고, opacity가 변함
+            $("#sentence").css("color", "blue")
+                .animate({fontSize: "200%"}, 1000).animate({opacity: "0.5"}, 1000)
+
+            // fontSize, opacity 함께 변경됨
+            // $("#sentence").css("color", "blue")
+            //     .animate({fontSize: "200%", opacity: "0.5"}, 1000)
+            
+            $("#btn").click(function(){
+                $("#text").css("color", "red").slideUp(1000).slideDown(1000);
+            })
+        })
+    </script>
+</body>
+</html>

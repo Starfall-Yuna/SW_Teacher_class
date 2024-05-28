@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 자바스크립트에서, 클래스랑 객체랑 생성자랑 독립적
+        // 생성자 :: 객체를 생성하는 함수
+        function Person1(){
+            this.name = "Lee"
+            this.age = 30
+            this.nation = "Korea"
+        }
+        function Person2(name, age, nation){
+            this.name = name
+            this.age = age
+            this.nation = nation
+        }
+
+        // 객체 생성 :: const/let 객체명 = new 생성자명(매개변수, ...);
+        let Lee = new Person1();     // 생성자를 실행하기 이전부터, Lee가 객체 타입으로 되어있음
+            // Lee라는 객체가 만들어진 뒤 name, age, nation이라는 속성이 하나씩 "추가"됨
+        Lee.job = "Teacher";
+        Lee.Print =  function() {
+            console.log(typeof(Lee))
+            console.log(Lee)
+        }
+        Lee.Print();
+
+        let Park = new Person2("Park", 35, "Japen")
+        console.log(typeof(Park))
+        console.log(Park)
+    </script>
+</body>
+</html>
